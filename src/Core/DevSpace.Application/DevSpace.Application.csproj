@@ -16,4 +16,12 @@
 	  <PackageReference Include="System.Linq.Async" Version="6.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Admin\Commands\" />
+    <Folder Include="Features\Admin\Queries\" />
+    <Folder Include="Features\Role\Commands\" />
+    <Folder Include="Features\Role\Queries\" />
+    <Folder Include="Features\User\Queries\" />
+  </ItemGroup>
+
 </Project>

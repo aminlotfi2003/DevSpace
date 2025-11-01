@@ -16,7 +16,7 @@ public interface IApplicationUserManager
     Task<User> GetUserByPhoneNumber(string phoneNumber);
     Task<SignInResult> AdminLogin(User user, string password);
     Task<User> GetByUserName(string userName);
-    Task<User> GetUserByIdAsync(int userId);
+    Task<User> GetUserByIdAsync(int userId, CancellationToken cancellationToken);
     Task<List<User>> GetAllUsersAsync();
     Task<IdentityResult> CreateUserWithPasswordAsync(User user, string password);
     Task<IdentityResult> AddUserToRoleAsync(User user, Role role);
@@ -24,5 +24,5 @@ public interface IApplicationUserManager
     Task<bool> IsUserLockedOutAsync(User user);
     Task ResetUserLockoutAsync(User user);
     Task UpdateUserAsync(User user);
-    Task UpdateSecurityStampAsync(User user);
+    Task UpdateSecurityStampAsync(User user, CancellationToken cancellationToken);
 }
